@@ -1,9 +1,9 @@
-package ai.viceversa;
+package ai.viceversa.application.adapters;
 
 import ai.viceversa.application.ports.TouristInformationServicePort;
+import ai.viceversa.domain.model.TouristInformation;
 import ai.viceversa.domain.vo.Arrange;
 import ai.viceversa.domain.vo.MobileOs;
-import ai.viceversa.domain.model.TouristInformation;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,8 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-class TouristInformationServicePortTest {
-
+class TouristInformationServiceImplTest {
     @Autowired
     private TouristInformationServicePort touristInformationServicePort;
     @Test

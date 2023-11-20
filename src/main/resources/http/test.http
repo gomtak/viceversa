@@ -1,2 +1,2 @@
 ###
-GET http://localhost:8080/test
+GET http://localhost:8080/api/tourist/search?keyword=고모산성&page=0&size=10

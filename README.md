@@ -13,3 +13,9 @@
   : 전반적인 REST API 동작을 체크할 수 있는 테스트 소스 구현
   : (선택) jpa specification 기반의 확장 용이한 검색 등 임의의 추가 기능
 
+# 시작하기
+ * docker-compose up 후 프로젝트 실행
+ * ex)
+   * http://localhost:8080/api/tourist/search?keyword=고모산성&page=0&size=10
+   * http://localhost:8080/api/tourist/search?keyword=인천광역시&page=0&size=10
+   * http://localhost:8080/api/tourist/search?keyword=서울

@@ -3,6 +3,8 @@ package ai.viceversa.infrastructure.persistence;
 import ai.viceversa.domain.repository.TouristInformationRepository;
 import ai.viceversa.domain.model.TouristInformation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,5 +45,10 @@ public class TouristInformationRepositoryImpl implements TouristInformationRepos
     @Override
     public long count() {
         return touristInformationJpaRepository.count();
+    }
+
+    @Override
+    public Page<TouristInformation> findKeywordLike(String keyword, Pageable pageable) {
+        return touristInformationJpaRepository.findByGalSearchKeywordContains(keyword, pageable);
     }
 }

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: viceversa_db
+    environment:
+      MYSQL_ROOT_PASSWORD: viceversa1234!
+      MYSQL_DATABASE: viceversa
+      MYSQL_USER: tak
+      MYSQL_PASSWORD: qwer1234!
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
